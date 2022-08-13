@@ -1,10 +1,12 @@
+import os
+import sys
+import pandas as pd
+from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.edge.service import Service
 from selenium.webdriver.edge.options import Options
-import pandas as pd
 
 # Note: browser and driver version must match
-
 edge_path = "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"
 driver_path = "C:/Users/davev/Documents/edgedriver_win64/msedgedriver.exe"
 url = "https://www.abc.net.au/news/justin"
@@ -12,6 +14,9 @@ url = "https://www.abc.net.au/news/justin"
 titles = []
 descriptions = []
 links = []
+
+time = datetime.now().strftime("%d%m%Y")  # ddmmyyyy
+app_path = os.path.dirname(sys.executable)
 
 # Headless mode
 options = Options()
@@ -38,7 +43,8 @@ for container in containers:
 df_news_headlines = pd.DataFrame(
     {"Title": titles, "Descrtiption": descriptions, "Link": links}
 )
-
-df_news_headlines.to_csv("news-headlines-headless.csv")
+csv_name = f"news-headlines-{time}.csv"
+csv_path = os.path.join(app_path, csv_name)
+df_news_headlines.to_csv(csv_path)
 
 driver.quit()

@@ -1,0 +1,6 @@
+# ignore folders
+build/
+dist/
+
+#ignore files types
+*.spec
