@@ -2,5 +2,8 @@
 build/
 dist/
 
-#ignore files types
+#ignore file types
 *.spec
+
+#ignore specific files
+pivot-table.xlsx

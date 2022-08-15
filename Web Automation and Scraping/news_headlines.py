@@ -1,5 +1,4 @@
-import os
-import sys
+import os, sys
 import pandas as pd
 from datetime import datetime
 from selenium import webdriver

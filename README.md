@@ -17,8 +17,9 @@
 
 #### Generate execuatable
 
+In the directory of py script:
 ``pyinstaller --onefile news_headlines.py``
-`` python -m PyInstaller --onefile news_headlines.py``
+``python -m PyInstaller --onefile news_headlines.py``
 
 #### Schedule Python script
 
@@ -40,3 +41,14 @@
 9. Click finish
 
 ## Automate Excel Report
+
+Generated pivot-table.xlsx must be in the same folder as pivot_to_report.exe
+
+#### Packages
+- openpyxl
+
+#### Generate execuatable
+
+In the directory of py script:
+``pyinstaller --onefile pivot_to_report.py``
+``python -m PyInstaller --onefile pivot_to_report.py``
