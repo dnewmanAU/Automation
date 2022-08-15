@@ -19,13 +19,14 @@
 
 In the directory of py script:
 ``pyinstaller --onefile news_headlines.py``
+or
 ``python -m PyInstaller --onefile news_headlines.py``
 
 #### Schedule Python script
 
 ##### Unix
 1. ``crontab -e``
-- [cron expression generator](https://crontab.guru/)
+[cron expression generator](https://crontab.guru/)
 2. ``cron expression <file path>``
 3. ``:wq`` Write and quit to save the crontab script
 
@@ -51,4 +52,5 @@ Generated pivot-table.xlsx must be in the same folder as pivot_to_report.exe
 
 In the directory of py script:
 ``pyinstaller --onefile pivot_to_report.py``
+or
 ``python -m PyInstaller --onefile pivot_to_report.py``
